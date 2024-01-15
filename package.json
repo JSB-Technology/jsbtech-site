@@ -5,17 +5,31 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@headlessui/tailwindcss": "^0.2.0",
+    "@heroicons/react": "^2.1.1",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "clsx": "^2.0.0",
     "gatsby": "^5.13.0",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-manifest": "^5.13.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.0",
+    "gatsby-plugin-svgr": "^3.0.0-beta.0",
     "gatsby-source-filesystem": "^5.13.0",
+    "gatsby-transformer-remark": "^6.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "autoprefixer": "^10.4.16",
+    "gatsby-plugin-postcss": "^6.13.0",
+    "postcss": "^8.4.32",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.4.0"
   },
   "keywords": [
     "gatsby"

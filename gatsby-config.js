@@ -21,8 +21,24 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        
       },
     },
+    'gatsby-plugin-svgr',
+    // MD
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`, // 指定存放 Markdown 文件的目录
+      },
+    },
+    // 添加 gatsby-transformer-remark 插件
+    `gatsby-transformer-remark`,
+    // Tailwind Css
+    'gatsby-plugin-postcss',
+
+    // 其他的这个那个
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -38,6 +54,13 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+    },
+    // robots.txt
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', disallow: ['/'] }]
+      }
     },
   ],
 }
