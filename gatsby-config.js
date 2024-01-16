@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    'gatsby-plugin-svgr',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,8 +25,7 @@ module.exports = {
         
       },
     },
-    'gatsby-plugin-svgr',
-    // MD
+    // MD 
     {
       resolve: `gatsby-source-filesystem`,
       options: {

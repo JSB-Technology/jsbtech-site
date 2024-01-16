@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "JSB Tech Site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "The official website of JSB Technology, built using Gatsby, integrating CI/CD processes to ensure code quality and automated deployment.",
+  "version": "0.2.1",
+  "author": "Jerry Jiang <Jerry31415926535@gmail.com>",
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
@@ -46,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/JSB-Technology/jsbtech-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/JSB-Technology/jsbtech-site/issues"
   }
 }
