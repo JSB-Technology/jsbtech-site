@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "gatsby-plugin-intl";
 
 import { Button } from '@/components/spare/Button'
 import { Container } from '@/components/spare/Container'
@@ -37,10 +37,10 @@ export function Hero() {
           <span className="hidden md:inline">
             Unveiling the Future in Concrete Technology:
           </span>
-          <a href="#" className="font-semibold text-indigo-600 no-underline">
+          <Link to="/productspce" className="font-semibold text-indigo-600 no-underline">
             <span className="absolute inset-0" aria-hidden="true" /> Our Advanced Next Gen Powder PCE{' '}
             <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </p>
       </div>
 

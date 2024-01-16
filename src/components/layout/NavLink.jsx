@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby' // 引入 Gatsby 的 Link 组件
+import { Link } from 'gatsby-plugin-intl'
 
 export function NavLink({ href, children }) {
   return (

@@ -1,14 +1,16 @@
 'use client'
 
 import React, { Fragment, useState } from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-intl'
+
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '../spare/Button'
-import { Container } from '../spare/Container'
-import { Logo } from '../spare/Logo'
-import { NavLink } from './NavLink'
+import { Button } from '@/components/spare/Button'
+import { Container } from '@/components/spare/Container'
+import { Logo } from '@/components/spare/Logo'
+import { NavLink } from '@/components/layout/NavLink'
+import { LangSelector } from '@/components/spare/LangSelector'
 
 import {
   Bars3Icon,
@@ -41,16 +43,6 @@ const products = [
     icon: Bars3Icon,
   },
 ]
-// TODO: 要删删干净
-// const callsToAction = [
-//   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-//   { name: 'Contact sales', href: '#', icon: PhoneIcon },
-//   { name: 'View all products', href: '#', icon: RectangleGroupIcon },
-// ]
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
 
 function MobileNavLink({ href, children }) {
   return (
@@ -87,6 +79,7 @@ function MobileNavIcon({ open }) {
   )
 }
 
+// TODO: 改 href 到link
 function MobileNavigation() {
 
   return (
@@ -126,7 +119,7 @@ function MobileNavigation() {
             <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
             <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <MobileNavLink href="#login">Sign in</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -147,7 +140,7 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="/home" aria-label="Home">
+            <Link to="/" aria-label="Home">
               <Logo />
             </Link>
 
@@ -188,10 +181,10 @@ export function Header() {
                             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                               <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                             </div>
-                            <a href={item.href} className="mt-6 block font-semibold no-underline text-gray-900">
+                            <Link to={item.href} className="mt-6 block font-semibold no-underline text-gray-900">
                               {item.name}
                               <span className="absolute inset-0" />
-                            </a>
+                            </Link>
                             <p className="mt-1 text-gray-600">{item.description}</p>
                           </div>
                         ))}
@@ -224,17 +217,20 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block ">
-              {/* <NavLink  href="/login">Our Story</NavLink>
+            {/* <div className="hidden md:block ">
+              <NavLink  href="/login">Our Story</NavLink>
               <NavLink href="/products">Products</NavLink>
-              <NavLink href="/login">Blog</NavLink> */}
-              {/* <NavLink href="/login">Downloads</NavLink> */}
-            </div>
+              <NavLink href="/login">Blog</NavLink>
+              <NavLink href="/login">Downloads</NavLink>
+            </div> */}
             <Button href="/register" color="blue" className='no-underline h-9'>
               <span>
                 Reach Us<span className="hidden lg:inline"></span>
               </span>
             </Button>
+
+            <LangSelector />
+
             <div className="-mr-1 mt-4 md:hidden">
               <MobileNavigation />
             </div>

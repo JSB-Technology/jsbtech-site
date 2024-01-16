@@ -6,8 +6,7 @@ import { TechSpec } from "@/components/productPage/TechSpec"
 import { Frequent } from "@/components/productPage/Frequent"
 
 const ProductPage = () => (
-  <Layout>
-    
+  <Layout url="products">
     
     <TechSpec />
     <Frequent />

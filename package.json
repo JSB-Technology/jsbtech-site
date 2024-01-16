@@ -16,6 +16,7 @@
     "clsx": "^2.0.0",
     "gatsby": "^5.13.0",
     "gatsby-plugin-image": "^3.13.0",
+    "gatsby-plugin-intl": "^5.10.0",
     "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.0",

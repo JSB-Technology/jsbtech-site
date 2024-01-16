@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby-plugin-intl";
 
 export function Company() {
 
@@ -30,9 +31,9 @@ export function Company() {
               fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.
             </p>
             <div className="mt-8 flex border-t border-gray-100 pt-8">
-              <a href="#" className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              <Link to="/about" className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                 View our story <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
             {/* <div className="mt-10 flex">
                 <a
