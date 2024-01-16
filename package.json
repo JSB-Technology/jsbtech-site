@@ -1,5 +1,5 @@
 {
-  "name": "JSB Tech Site",
+  "name": "JSB-Tech-Site",
   "private": true,
   "description": "The official website of JSB Technology, built using Gatsby, integrating CI/CD processes to ensure code quality and automated deployment.",
   "version": "0.2.1",
