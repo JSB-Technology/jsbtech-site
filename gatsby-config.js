@@ -25,14 +25,14 @@ module.exports = {
         
       },
     },
-    // MD 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/markdown-pages`, // 指定存放 Markdown 文件的目录
-      },
-    },
+    // // MD 
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `markdown-pages`,
+    //     path: `${__dirname}/src/markdown-pages`, // 指定存放 Markdown 文件的目录
+    //   },
+    // },
     // 添加 gatsby-transformer-remark 插件
     `gatsby-transformer-remark`,
     // Tailwind Css

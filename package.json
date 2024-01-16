@@ -4,6 +4,9 @@
   "description": "The official website of JSB Technology, built using Gatsby, integrating CI/CD processes to ensure code quality and automated deployment.",
   "version": "0.2.1",
   "author": "Jerry Jiang <Jerry31415926535@gmail.com>",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
