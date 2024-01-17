@@ -32,7 +32,7 @@ const Layout = ({ children, url }) => {
 
   // 导入支持的语言
   const supportedLanguages = availableLanguages;
-  const userLanguage = navigator.language.split('-')[0];
+  // const userLanguage = navigator.language.split('-')[0];
 
   // 使用 intl 插件
   const intl = useIntl();
@@ -43,11 +43,13 @@ const Layout = ({ children, url }) => {
     let languageSelected = localStorage.getItem('languageSelected');
 
     if (languageSelected !== 'true') {
+
+      let userLanguage = navigator.language.split('-')[0];
       if (userLanguage !== defaultLanguage && supportedLanguages.includes(userLanguage) && userLanguage !== currentLanguage) {
         setShowModal(true);
       }
     }
-  }, [userLanguage, supportedLanguages, currentLanguage]);
+  }, [supportedLanguages, currentLanguage]);
 
   const handleLanguageChange = () => {
     navigate(`/${userLanguage}/` + url);
