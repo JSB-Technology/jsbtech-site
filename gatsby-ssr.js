@@ -12,6 +12,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
         __html: `
           window.fbAsyncInit = function() {
             FB.init({
+              appId            : '236075412914941',
               xfbml            : true,
               version          : 'v19.0'
             });
