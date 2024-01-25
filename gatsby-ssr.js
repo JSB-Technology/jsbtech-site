@@ -4,15 +4,17 @@
 
 import React from 'react';
 
+import React from 'react';
+
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
-  setHeadComponents([
+  setPostBodyComponents([
+    <div key="fb-root" id="fb-root"></div>,
     <script
       key="fb-sdk"
       dangerouslySetInnerHTML={{
         __html: `
           window.fbAsyncInit = function() {
             FB.init({
-              appId            : '717367753487749',
               xfbml            : true,
               version          : 'v19.0'
             });
@@ -29,15 +31,9 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       }}
     />,
   ]);
-
-  setPostBodyComponents([
-    <div key="fb-root" id="fb-root" />,
-    <div
-      key="fb-customer-chat"
-      id="fb-customer-chat"
-      className="fb-customerchat"
-      page_id="236075412914941"
-      attribution="biz_inbox"
-    />,
-  ]);
 };
+
+setPostBodyComponents([
+  // ...其他组件
+  <div key="fb-customer-chat" className="fb-customerchat" page_id="236075412914941" attribution="biz_inbox"></div>,
+]);
