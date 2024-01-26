@@ -67,7 +67,7 @@ export function Hero() {
         <span className="font-bold">Equipment{'  '}</span>manufacturing.
       </p>
       <div className="mt-10 ml-6 flex justify-center gap-x-6">
-        <Button className="no-underline hover:underline" href="/register">Get our sample</Button>
+        <Button id="get_samples" className="no-underline hover:underline" href="/register">Get our sample</Button>
         <Button
           className="no-underline hover:underline"
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"

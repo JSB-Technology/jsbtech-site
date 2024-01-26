@@ -115,11 +115,16 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="#testimonials">Our Story</MobileNavLink>
+            <MobileNavLink href="#testimonials">Products</MobileNavLink>
+            <MobileNavLink href="#testimonials">News</MobileNavLink>
+            <MobileNavLink href="#testimonials">Q&A</MobileNavLink>
+
+            {/* 分割线 */}
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="#login">Sign in</MobileNavLink>
+            // TODO: 验证 herf #hero
+            <MobileNavLink href="#hero">Get Samples</MobileNavLink>
+
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -223,9 +228,10 @@ export function Header() {
               <NavLink href="/login">Blog</NavLink>
               <NavLink href="/login">Downloads</NavLink>
             </div> */}
-            <Button href="/register" color="blue" className='no-underline h-9'>
+            
+            <Button href="/register" color="blue" className='no-underline h-9 sm:hidden'>
               <span>
-                Reach Us<span className="hidden lg:inline"></span>
+                Get Samples<span className="hidden lg:inline"></span>
               </span>
             </Button>
 

@@ -1,14 +1,12 @@
+import React from 'react';
+
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
 
-import React from 'react';
-
-import React from 'react';
 
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
-  setPostBodyComponents([
-    <div key="fb-root" id="fb-root"></div>,
+  setHeadComponents([
     <script
       key="fb-sdk"
       dangerouslySetInnerHTML={{
@@ -31,9 +29,15 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       }}
     />,
   ]);
-};
 
-setPostBodyComponents([
-  // ...其他组件
-  <div key="fb-customer-chat" className="fb-customerchat" page_id="236075412914941" attribution="biz_inbox"></div>,
-]);
+  setPostBodyComponents([
+    <div key="fb-root" id="fb-root" />,
+    <div
+      key="fb-customer-chat"
+      id="fb-customer-chat"
+      className="fb-customerchat"
+      page_id="236075412914941"
+      attribution="biz_inbox"
+    />,
+  ]);
+};
