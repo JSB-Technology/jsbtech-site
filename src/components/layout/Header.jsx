@@ -122,7 +122,6 @@ function MobileNavigation() {
 
             {/* 分割线 */}
             <hr className="m-2 border-slate-300/40" />
-            // TODO: 验证 herf #hero
             <MobileNavLink href="#hero">Get Samples</MobileNavLink>
 
           </Popover.Panel>
@@ -228,8 +227,8 @@ export function Header() {
               <NavLink href="/login">Blog</NavLink>
               <NavLink href="/login">Downloads</NavLink>
             </div> */}
-            
-            <Button href="/register" color="blue" className='no-underline h-9 sm:hidden'>
+
+            <Button href="/register" color="blue" className='hidden md:block no-underline h-9'>
               <span>
                 Get Samples<span className="hidden lg:inline"></span>
               </span>
