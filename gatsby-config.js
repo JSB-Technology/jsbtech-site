@@ -11,7 +11,7 @@ module.exports = {
 
   // TODO: 进一步SEO
   siteMetadata: {
-    title: `JSB PCE Technology`,
+    title: `World Leading PCE Technology!`,
     description: `Meet the pinnacle of innovation in the world of Concrete Water Reducers and Equipment manufacturing.`,
     author: `@emopp`,
     siteUrl: `https://jsbpce.com/`,

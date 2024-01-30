@@ -57,7 +57,8 @@ export function Features() {
       href: '/products',
       image: picQuery.picPower.publicURL
     },
-    { title: 'GDPC-5C', 
+    {
+      title: 'GDPC-5C',
       description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!',
       href: '#',
       image: picQuery.picMachine.publicURL
@@ -70,21 +71,24 @@ export function Features() {
       aria-label="JSB Technology's featuring Products"
       className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-22"
     >
-      <img 
+      <img
         src={picQuery.bgImage.publicURL}
         alt="background texture"
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         width={2245}
         height={1636} />
-      
+
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Decade of Innovation, Pioneering the Industry with Pride.
           </h2>
-          <p className="mt-6 mx-auto text-lg tracking-tight text-blue-100">
-          Experience the future of PCE technology with JSB Technology, where excellence is not just our history, but our everyday commitment.
-          </p>
+          <div className="mt-6 mx-auto text-lg tracking-tight text-blue-100">
+            <p>
+              Experience the future of PCE technology with JSB Technology, where excellence is not just our history, but our everyday commitment.
+            </p>
+          </div>
+
         </div>
         <Tab.Group
           as="div"
@@ -143,14 +147,14 @@ export function Features() {
                     </div>
                     <div className="mt-10 w-[45rem] p-6 pr-20 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Link to={feature.href}>
-                      <img
-                        className="w-full rounded-xl border-14 border-white"
-                        src={feature.image}
-                        alt={'picture of ' + feature.title}
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                        
-                      />
+                        <img
+                          className="w-full rounded-xl border-14 border-white"
+                          src={feature.image}
+                          alt={'picture of ' + feature.title}
+                          priority
+                          sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
+
+                        />
                       </Link>
                     </div>
                   </Tab.Panel>
