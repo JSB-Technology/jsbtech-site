@@ -183,6 +183,7 @@ export function Footer() {
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <Link
+                  key={item.name}
                   href={item.href}
                   className="text-gray-400 hover:text-gray-500"
                   aria-label={ "JSB on " + item.name}

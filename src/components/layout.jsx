@@ -27,30 +27,31 @@ const Layout = ({ children, url }) => {
     }
   `)
 
-  // - Multi-language Dialog
+  // - Language Support
   const [showModal, setShowModal] = useState(false);
-
+  const [userLanguage, setUserLanguage] = useState('en');
   // 导入支持的语言
   const supportedLanguages = availableLanguages;
-  const userLanguage = navigator.language.split('-')[0];
-
   // 使用 intl 插件
   const intl = useIntl();
   const currentLanguage = intl.locale; // 当前语言代码
-  // let languageSelected = localStorage.getItem('languageSelected');
 
   useEffect(() => {
-    let languageSelected = localStorage.getItem('languageSelected');
-
+    // 获取 userLanguage  
+    const browserLanguage = navigator ? navigator.language.split('-')[0] : 'en';
+    // 从 localStorage 获取用户是否选择过语言
+    const languageSelected = localStorage.getItem('languageSelected');
+    // 如果用户没有选择过语言，且用户语言不是默认语言，且用户语言是支持的语言，且用户语言不是当前语言
     if (languageSelected !== 'true') {
-
-      // let userLanguage = navigator.language.split('-')[0];
-      if (userLanguage !== defaultLanguage && supportedLanguages.includes(userLanguage) && userLanguage !== currentLanguage) {
+      if (browserLanguage !== defaultLanguage && supportedLanguages.includes(browserLanguage) && browserLanguage !== currentLanguage) {
+        // 则弹出语言选择框
         setShowModal(true);
+        setUserLanguage(browserLanguage);
       }
     }
-  }, [supportedLanguages, currentLanguage, userLanguage]);
+  }, [supportedLanguages, currentLanguage]);
 
+  // 处理语言切换
   const handleLanguageChange = () => {
     navigate(`/${userLanguage}/` + url);
     setShowModal(false);
