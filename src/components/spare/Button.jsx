@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link } from "gatsby-plugin-intl"
 import clsx from 'clsx'
 
 const baseStyles = {
@@ -25,7 +25,7 @@ const variantStyles = {
   },
 }
 
-export function Button({ className, ...props }) {
+export function Button({ className, to, href, newTab, ...props }) {
   props.variant ??= 'solid'
   props.color ??= 'slate'
 
@@ -34,14 +34,24 @@ export function Button({ className, ...props }) {
     props.variant === 'outline'
       ? variantStyles.outline[props.color]
       : props.variant === 'solid'
-      ? variantStyles.solid[props.color]
-      : undefined,
+        ? variantStyles.solid[props.color]
+        : undefined,
     className,
   )
 
-  return typeof props.href === 'undefined' ? (
-    <button className={className} {...props} />
-  ) : (
-    <Link className={className} {...props} />
-  )
+  // 内部链接，使用 gatsby-plugin-intl 的 Link
+  if (typeof to !== 'undefined') {
+    return <Link to={to} className={className} {...props} />;
+  }
+
+  // 外部链接，使用常规的 <a> 标签
+  if (typeof href !== 'undefined') {
+    const target = newTab ? "_blank" : undefined;
+    const rel = newTab ? "noopener noreferrer" : undefined;
+
+    return <a href={href} target={target} rel={rel} className={className} {...props} />;
+  }
+
+  // 如果既没有 to 也没有 href 属性，渲染一个按钮
+  return <button className={className} {...props} />;
 }

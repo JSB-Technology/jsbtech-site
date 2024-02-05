@@ -34,6 +34,6 @@ const IndexPage = () => {
 
 }
 
-export const Head = () => <Seo title="JSB Technology" />
+export const Head = () => <Seo title="JSB Tech" />
 
 export default IndexPage

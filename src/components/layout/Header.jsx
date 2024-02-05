@@ -141,18 +141,21 @@ export function Header() {
       // backgroundImage: 'linear-gradient(white 75%, rgba(255, 255, 255, 0.2))'
       background: 'white'
     }}>
+
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
+
+            {/* 大 Logo */}
             <Link to="/" aria-label="Home">
               <Logo />
             </Link>
 
+            {/* 导航栏 */}
             <div className="hidden md:flex md:gap-x-6">
-
               <Popover.Group className="flex lg:gap-x-8">
 
-                <NavLink href="#pricing">Our Story</NavLink>
+                <NavLink href="/about-us">Our Story</NavLink>
 
                 <Popover>
                   <Popover.Button
@@ -193,6 +196,7 @@ export function Header() {
                           </div>
                         ))}
                       </div>
+                      {/* CTA 按钮 */}
                       {/* <div className="bg-gray-50">
                         <div className="px-6 lg:px-8 max-w-7xl mx-auto">
                           <div className="grid grid-cols-3 divide-x divide-gray-900/5 border-x border-gray-900/5">
@@ -211,34 +215,39 @@ export function Header() {
                       </div> */}
                     </Popover.Panel>
                   </Transition>
-
                 </Popover>
 
-                {/* <NavLink href="#pricing">Downloads</NavLink> */}
-                <NavLink href="#pricing">News</NavLink>
-                <NavLink href="#pricing">Q&A</NavLink>
+                <NavLink href="/blog">News</NavLink>
+
+                <NavLink href="/questions">Q&A</NavLink>
+
               </Popover.Group>
             </div>
           </div>
+
+          {/* 右半侧导航栏 */}
           <div className="flex items-center gap-x-5 md:gap-x-8">
+
+            {/* 偏右边导航 */}
             {/* <div className="hidden md:block ">
               <NavLink  href="/login">Our Story</NavLink>
-              <NavLink href="/products">Products</NavLink>
-              <NavLink href="/login">Blog</NavLink>
-              <NavLink href="/login">Downloads</NavLink>
             </div> */}
 
-            <Button href="/register" color="blue" className='hidden md:block no-underline h-9'>
+            {/* 样本获取按钮 */}
+            <Button color="blue" className='hidden md:block no-underline h-9' to='/register-sample'>
               <span>
                 Get Samples<span className="hidden lg:inline"></span>
               </span>
             </Button>
 
+            {/* 语言栏 */}
             <LangSelector />
 
+            {/* 移动端 */}
             <div className="-mr-1 mt-4 md:hidden">
               <MobileNavigation />
             </div>
+
           </div>
         </nav>
 

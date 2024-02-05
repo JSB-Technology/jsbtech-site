@@ -21,7 +21,9 @@ export function Hero() {
           className="absolute inset-0 -z-50 h-full w-full object-cover"
         /> */}
 
-        {/* <div className="absolute inset-0 -z-0 bg-white bg-opacity-80"></div> */}
+      {/* <div className="absolute inset-0 -z-0 bg-white bg-opacity-80"></div> */}
+
+      {/* TODO: 动态背景图片 + 更正图片加载方式！！！ */}
       <div className="absolute inset-0 -z-10 image-container">
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
@@ -31,12 +33,13 @@ export function Hero() {
         {/* <div className="absolute inset-0 bg-white bg-opacity-50"></div> */}
       </div>
 
-      {/* Banner */}
+      {/* 新闻 banner */}
       <div className="mb-0 mt-0 flex justify-center ">
         <p className="relative rounded-full px-3 py-1 text-sm leading-5 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">
           <span className="hidden md:inline">
             Unveiling the Future in Concrete Technology:
           </span>
+          {/* TODO: 产品页完善后更正链接 */}
           <Link to="/productspce" className="font-semibold text-indigo-600 no-underline">
             <span className="absolute inset-0" aria-hidden="true" /> Our Advanced Next Gen Powder PCE{' '}
             <span aria-hidden="true">&rarr;</span>
@@ -44,7 +47,7 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Hero Title */}
+      {/* Hero 大标语 */}
       <h1 className="mt-5 mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         {threeWords[0]} {' '}
         <span className="relative whitespace-nowrap text-blue-600">
@@ -60,16 +63,27 @@ export function Hero() {
         </span>{' '}
         {threeWords[2]}
       </h1>
+
+      {/* Hero 小标语 */}
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
         Meet the pinnacle of innovation in the world of{'  '}
         <span className="font-bold">Concrete Water Reducers{'  '}</span>
         and{'  '}
         <span className="font-bold">Equipment{'  '}</span>manufacturing.
       </p>
+
+      {/* Hero 页按钮 */}
       <div className="mt-10 ml-6 flex justify-center gap-x-6">
-        <Button id="get_samples" className="no-underline hover:underline" href="/register">Get our sample</Button>
+        <Button className='no-underline hover:underline' to='/register-sample'>
+          <span>
+            Get our sample<span className="hidden lg:inline"></span>
+          </span>
+        </Button>
+
+        {/* TODO: yt上线后更新视频链接 */}
         <Button
           className="no-underline hover:underline"
+          newTab={true}
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
         >
