@@ -26,7 +26,7 @@ const products = [
   {
     name: 'Reputable Liquid PCE',
     description: 'Our reputable Liquid Polycarboxylate Superplasticizer, the industry-leading 4th-gen Water-Reducing Agent',
-    href: '#products',
+    href: '#',
     icon: ChartPieIcon,
   },
   {
@@ -35,7 +35,12 @@ const products = [
     href: '/products',
     icon: CursorArrowRaysIcon,
   },
-  { name: 'GDPC-5C', description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!', href: '#', icon: SquaresPlusIcon },
+  {
+    name: 'GDPC-5C',
+    description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!',
+    href: '#',
+    icon: SquaresPlusIcon
+  },
   {
     name: 'Services',
     description: 'Come learn about our Customer-first Service and Convenient Delivery process',
@@ -46,7 +51,7 @@ const products = [
 
 function MobileNavLink({ href, children }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
+    <Popover.Button as={Link} to={href} className="block w-full p-2">
       {children}
     </Popover.Button>
   )
@@ -79,9 +84,9 @@ function MobileNavIcon({ open }) {
   )
 }
 
-// TODO: 改 href 到link
-function MobileNavigation() {
 
+function MobileNavigation() {
+  // TODO: 改 href 到link
   return (
     <Popover>
       <Popover.Button
@@ -115,9 +120,10 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#testimonials">Our Story</MobileNavLink>
+            {/* TODO: 改移动端导航 */}
+            <MobileNavLink href="/about-us">Our Story</MobileNavLink>
             <MobileNavLink href="#testimonials">Products</MobileNavLink>
-            <MobileNavLink href="#testimonials">News</MobileNavLink>
+            <MobileNavLink href="#testimonials">Blog</MobileNavLink>
             <MobileNavLink href="#testimonials">Q&A</MobileNavLink>
 
             {/* 分割线 */}
@@ -137,7 +143,7 @@ export function Header() {
 
 
   return (
-    <header className="sticky top-0 py-2 z-50 max-h-40 shadow-sm" style={{
+    <header className="sticky top-0 py-2 z-50 max-h-20 shadow-sm sm:max-h-40" style={{
       // backgroundImage: 'linear-gradient(white 75%, rgba(255, 255, 255, 0.2))'
       background: 'white'
     }}>
