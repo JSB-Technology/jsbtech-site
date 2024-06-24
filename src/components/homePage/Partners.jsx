@@ -10,7 +10,7 @@ export function Partners() {
             allFile(filter: { 
                 extension: { eq: "svg" },
                 sourceInstanceName: { eq: "images" },
-                relativeDirectory: { eq: "assets/flags" }
+                relativeDirectory: { eq: "assets/partners" }
             }) {
                 edges {
                 node {

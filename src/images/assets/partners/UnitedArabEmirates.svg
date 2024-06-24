@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-169073d6-0060-4379-89e9-eb75905fea88" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .uuid-d8fabc22-3304-4c0f-ba6e-cc8399fbda51 {
+        fill: #fff;
+      }
+
+      .uuid-71d3c4d0-e0c4-45b5-8065-0e5c8a70fbe9 {
+        fill: #00732f;
+      }
+
+      .uuid-65180991-7f3e-4c8d-8f7f-c3e6b3d92487 {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <rect id="uuid-3d511c15-0a5b-4033-a67c-14711709b01b" data-name="green" class="uuid-71d3c4d0-e0c4-45b5-8065-0e5c8a70fbe9" x="-16.05" y="34" width="265.09" height="132"/>
+  <rect class="uuid-d8fabc22-3304-4c0f-ba6e-cc8399fbda51" x="-16.05" y="77.64" width="265.09" height="88.36"/>
+  <rect x="-16.05" y="122.36" width="265.09" height="43.64"/>
+  <rect id="uuid-eadc14b7-a0bb-4c6a-9111-4ce90e9daa64" data-name="red" class="uuid-65180991-7f3e-4c8d-8f7f-c3e6b3d92487" x="-16.05" y="34" width="66.55" height="132"/>
+</svg>
