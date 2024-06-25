@@ -17,7 +17,7 @@ export function Logo(props) {
   return (
     <div className="logo-container" >
       <img src={logoQuery.file.publicURL} alt="Logo" className="w-full h-full object-contain" style={
-        { width: 150, height: 150}
+        { width: 140, height: 140}
       }/>
     </div>
   )

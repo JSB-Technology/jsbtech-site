@@ -90,7 +90,7 @@ function MobileNavigation() {
   return (
     <Popover>
       <Popover.Button
-        className="relative z-10 flex h-8 w-8 items -center justify-center ui-not-focus-visible:outline-none"
+        className="relative z-10 flex h-10 w-10 items -center justify-center ui-not-focus-visible:outline-none"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}
@@ -143,22 +143,22 @@ export function Header() {
 
 
   return (
-    <header className="sticky top-0 py-2 z-50 max-h-20 shadow-sm sm:max-h-40" style={{
+    <header className="sticky top-0 z-50" style={{
       // backgroundImage: 'linear-gradient(white 75%, rgba(255, 255, 255, 0.2))'
       background: 'white'
     }}>
 
-      <Container>
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
+      <Container className="p-0">
+        <nav className="relative z-50 h-33 flex justify-between items-start">
+          <div className="flex items-start md:gap-x-12">
 
             {/* 大 Logo */}
-            <Link to="/" aria-label="Home">
+            <Link to="/" aria-label="Home" className='pb-3'>
               <Logo />
             </Link>
 
             {/* 导航栏 */}
-            <div className="hidden md:flex md:gap-x-6">
+            <div className="hidden mt-9 md:flex md:gap-x-6">
               <Popover.Group className="flex lg:gap-x-8">
 
                 <NavLink href="/about-us">Our Story</NavLink>
@@ -183,14 +183,14 @@ export function Header() {
                     leaveTo="opacity-0 -translate-y-1"
                   >
                     <Popover.Panel
-                      className="fixed shadow-md items-center inset-x-0 top-12 left-0 right-0 -z-10 bg-white pt-14 ring-0 ring-gray-900/5"
+                      className="fixed items-start inset-x-0 top-8 left-0 right-0 -z-10 bg-white pt-10 ring-0 ring-gray-900/5 bg-gray-150 bg-opacity-95"
                       onMouseEnter={() => setIsOpen(true)}
                       onMouseLeave={() => setIsOpen(false)}
                       show={isOpen.toString()}
                     >
-                      <div className="grid grid-cols-4 max-w-7xl mx-auto gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
+                      <div className="grid grid-cols-4 max-w-7xl mx-auto gap-x-4 px-6 pt-10 pb-2 lg:px-8 xl:gap-x-8">
                         {products.map((item) => (
-                          <div key={item.name} className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
+                          <div key={item.name} className="group relative rounded-lg mt-2 p-6 pb-2 text-sm leading-6 hover:bg-gray-50">
                             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                               <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                             </div>
@@ -232,7 +232,7 @@ export function Header() {
           </div>
 
           {/* 右半侧导航栏 */}
-          <div className="flex items-center gap-x-5 md:gap-x-8">
+          <div className="flex item-start mt-10 gap-x-5 md:gap-x-8">
 
             {/* 偏右边导航 */}
             {/* <div className="hidden md:block ">
@@ -240,17 +240,17 @@ export function Header() {
             </div> */}
 
             {/* 样本获取按钮 */}
-            <Button color="blue" className='hidden md:block no-underline h-9' to='/register-sample'>
+            <Button color="blue" className='hidden md:block no-underline h-10' to='/register-sample'>
               <span>
                 Get Samples<span className="hidden lg:inline"></span>
               </span>
             </Button>
 
             {/* 语言栏 */}
-            <LangSelector />
+            <LangSelector className=""/>
 
             {/* 移动端 */}
-            <div className="-mr-1 mt-4 md:hidden">
+            <div className="-mr-1 mt-3 md:hidden">
               <MobileNavigation />
             </div>
 

@@ -12,7 +12,6 @@ const threeWords = [
 
 export function Hero() {
 
-
   return (
     <Container className="py-12 my-12 text-center sm:my-12 md:py-10 xl:py-8 xl:my-10 2xl:py-0 2xl:my-20">
       {/* <img
@@ -96,7 +95,6 @@ export function Hero() {
           <span className="ml-3">Watch video</span>
         </Button>
       </div>
-
     </Container>
   )
 }
