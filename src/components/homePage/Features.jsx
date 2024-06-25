@@ -69,8 +69,9 @@ export function Features() {
     <section
       id="featuring_Products"
       aria-label="JSB Technology's featuring Products"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-22"
+      className="relative overflow-hidden bg-blue-600 pb-0 pt-20 sm:pt-22"
     >
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent z-10"></div>
       <img
         src={picQuery.bgImage.publicURL}
         alt="background texture"
@@ -78,16 +79,16 @@ export function Features() {
         width={2245}
         height={1636} />
 
-      <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+      <Container className="relative z-10">
+        <div className="relative z-10 max-w-2xl md:mx-auto md:text-center xl:max-w-none">
+          <h2 className="font-display pb-1 text-3xl tracking-tight bg-gradient-to-r from-blue-300 via-purple-500 to-pink-400 bg-clip-text text-transparent sm:text-4xl md:text-5xl">
             Decade of Innovation, Pioneering the Industry with Pride.
           </h2>
-          <div className="mt-6 mx-auto text-lg tracking-tight text-blue-100">
-            <p>
+          {/* <div className="mt-6 mx-auto text-lg tracking-tight text-gray-800">
+            <p className="">
               Experience the future of PCE technology with JSB Technology, where excellence is not just our history, but our everyday commitment.
             </p>
-          </div>
+          </div> */}
 
         </div>
         <Tab.Group

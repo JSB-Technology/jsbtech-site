@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(-50%);
+    }
+
+    45% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    70% {
+        transform: translateX(-100%);
+    }
+
+    75% {
+        transform: translateX(-150%);
+    }
+
+    95% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-vertical {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(-25%);
+    }
+
+    45% {
+        transform: translateY(-25%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+
+    70% {
+        transform: translateY(-50%);
+    }
+
+    75% {
+        transform: translateY(-75%);
+    }
+
+    95% {
+        transform: translateY(-75%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.md\\:animate-slide {
+    animation: slide 20s infinite;
+}
+
+@media (max-width: 768px) {
+    .md\\:animate-slide {
+        animation: none;
+    }
+
+    .animate-slide-vertical {
+        animation: slide-vertical 20s infinite;
+    }
+}

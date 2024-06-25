@@ -57,6 +57,18 @@ module.exports = {
         '34': '8.5rem',   // 136px
         '35': '8.75rem',  // 140px
       },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        scroll: 'scroll 20s linear infinite',
+      },
+      zIndex: {
+        '-11': '-11',
+      },
     },
   },
   plugins: [
