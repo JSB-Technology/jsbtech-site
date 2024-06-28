@@ -1,4 +1,9 @@
 {
     "hello": "Hello",
-    "welcome": "Welcome to our website"
+    "welcome": "Welcome to our website",
+    "page-powder01-title": "一号粉剂",
+    "page-powder01-product_name": "WRP-4聚羧酸减水剂（PCE）粉末",
+    "page-powder01-product_description": "WRP-4 是一种高效、自由流动、喷雾干燥粉末，由新一代聚羧酸盐基聚合物组成。它可用作高效减水剂强化材料，提供卓越的性能。此外，它还可用作适用于石膏、陶瓷和其他矿物材料的出色分散增塑剂。\n\nWRP-4 专门设计为高性能混凝土、高强度混凝土、高体积粉煤灰/矿渣混凝土以及灌浆、自流平砂浆和砂浆应用的高效减水剂。它符合 ASTM C 494、Type-F 规范，确保其质量和可靠性。",
+    "page-powder01-main_feature": "减水效果显著，最高可达30%",
+    "page-powder01-side_features": "\n稳定性优良，提供较长的工作时间\n\n独特的均质塑化性能，有效防止离析和泌水\n\n各类水泥、石膏、矿物的有效分散剂"
 }

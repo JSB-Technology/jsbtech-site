@@ -1,4 +1,22 @@
 {
-    "hello": "Hello",
-    "welcome": "Welcome to our website"
+    "Navbar-Us": "Our Story",
+    "Navbar-Products": "Products",
+    "Navbar-News": "News",
+    "Navbar-QA": "Q&A",
+    "Navbar-Sample": "Get Samples",
+    
+    "product-page-tab1": "Features",
+    "product-page-tab2": "Usage",
+    "product-page-tab3": "Test Data",
+    "product-page-spec": "Specification",
+    "product-page-spec_desc": "Product information and details.",
+    "product-page-btn-download": "Download",
+    
+    "page-powder01-title": "Powder 01",
+    "page-powder01-product_name": "WRP-4 Polycarboxylate Superplasticizer (PCE) Powder",
+    "page-powder01-product_description": "WRP-4 is a highly efficient, free-flowing, and spray-dried powder composed of a newgeneration polycarboxylate-based polymer. It serves as a superplasticizer forcement-based materials, offering exceptional performance. Additionally, it functions as an excellent dispersion plasticizer suitable for gypsum, ceramic,and other mineral materials.\n\nWRP-4 is specifically designed as a superplasticizer for high-performance concrete,high-strength concrete, high-volume fly ash/slag concrete, as well as grouting, self-leveling screed, and mortar applications. It meets the ASTM C 494, Type-F specifications, ensuring its quality and reliability.",
+    "page-powder01-main_feature": "Remarkable water reduction capability of up to 30%",
+    "page-powder01-side_features": "\nExcellent stability, providing an extended working time\n\nUnique homogeneous plasticizing property, effectively preventing segregationand bleeding\n\nEffective dispersal agent for various types of cement, gypsum, and minerals"
+    \
+
 }
