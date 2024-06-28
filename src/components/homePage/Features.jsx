@@ -45,12 +45,7 @@ export function Features() {
   `);
 
   const features = [
-    {
-      title: 'Reputable Liquid PCE',
-      description: 'Our reputable Liquid Polycarboxylate Superplasticizer, the industry-leading 4th-gen Water-Reducing Agent',
-      href: '/products/liquid',
-      image: picQuery.picLiquid.publicURL
-    },
+    
     {
       title: 'Fulture of Powder PCE',
       description: 'Just announced revolution, boosting huge improvement over traditional powders, proudly heralds the future of construction.',
@@ -62,6 +57,12 @@ export function Features() {
       description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!',
       href: '/products/machine',
       image: picQuery.picMachine.publicURL
+    },
+    {
+      title: 'Reputable Liquid PCE',
+      description: 'Our reputable Liquid Polycarboxylate Superplasticizer, the industry-leading 4th-gen Water-Reducing Agent',
+      href: '/products/liquid',
+      image: picQuery.picLiquid.publicURL
     },
   ]
 
@@ -142,12 +143,12 @@ export function Features() {
                 {features.map((feature) => (
                   <Tab.Panel key={feature.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                      <div className="absolute pb-4 -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
                       <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] p-6 pr-20 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-10 w-[45rem] p-6 pr-20 overflow-hidden bg-gradient-to-t from-white/30 via-transparent to-transparent shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Link to={feature.href}>
                         <img
                           className="w-full rounded-xl border-14 border-white"

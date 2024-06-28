@@ -4,12 +4,11 @@ import Layout from "@/components/layout"
 import Seo from "@/components/seo"
 import { Hero } from "@/components/homePage/Hero"
 import { Features } from "@/components/homePage/Features"
-import { Incentives } from "@/components/homePage/Incentives"
 import { Partners } from "@/components/homePage/Partners"
 import { Company } from "@/components/homePage/Company"
-import { Testimonials } from "@/components/homePage/Testimonials"
 import { Newsletter } from "@/components/layout/Newsletter"
-
+// import { Incentives } from "@/components/homePage/Incentives"
+// import { Testimonials } from "@/components/homePage/Testimonials"
 import { useIntl } from "gatsby-plugin-intl";
 
 const IndexPage = () => {
@@ -69,8 +68,8 @@ const IndexPage = () => {
     <Partners />
     <Company />
 
-    <Incentives />
-    <Testimonials />
+    {/* <Incentives /> */}
+    {/* <Testimonials /> */}
     <Newsletter />
 
   </Layout>

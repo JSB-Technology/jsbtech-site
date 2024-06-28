@@ -13,17 +13,17 @@ const links = [
     description: 'Discover why JSB is a leader in PCE products.',
     icon: BookOpenIcon,
   },
-  { 
-    name: 'Products', 
-    href: '#', 
-    description: 'See our full product line and details.', 
-    icon: QueueListIcon 
+  {
+    name: 'Products',
+    href: '#',
+    description: 'See our full product line and details.',
+    icon: QueueListIcon
   },
-  { 
-    name: 'Blog', 
-    href: '#', 
-    description: 'Read our latest news and articles.', 
-    icon: RssIcon 
+  {
+    name: 'Blog',
+    href: '#',
+    description: 'Read our latest news and articles.',
+    icon: RssIcon
   },
   {
     name: 'Guides',
@@ -31,30 +31,31 @@ const links = [
     description: 'Look at the common questions we got asked.',
     icon: BookmarkSquareIcon,
   },
-  
+
 ]
 
 const NotFoundPage = () => (
-  <Layout url="404">
+  <Layout url="404" className="relative pt-10 overflow-hidden">
+    <div className="absolute inset-0 h-full bg-gradient-to-b from-yellow-100/50 via-white to-white z-10"></div>
+    <div className="relative z-10 mx-auto max-w-2xl text-center pt-12 sm:pt-14">
 
-    <div className="mx-auto mt-20 max-w-2xl text-center sm:mt-24">
-      <p className="text-base font-semibold leading-8 text-indigo-600">404</p>
+      <p className="text-base font-semibold text-xl md:leading-8 text-indigo-600">404</p>
       {/* TODO: 正式版更改404页面内容*/}
       {/* <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">This page does not exist</h1>
       <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
         Sorry, we couldn’t find the page you’re looking for.
       </p> */}
-      <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">This is a developing site</h1>
-      <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
-        We're Getting Ready to Launch!<br/>
+      <h1 className="pt-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-5xl">This is a developing site</h1>
+      <p className="pt-4 text-base leading-7 text-gray-600 sm:pt-6 sm:text-lg sm:leading-8">
+        We're Getting Ready to Launch!<br />
         Stay tuned for updates or Reach out to us at <a href="mailto:info@jsbpce.com">info@jsbpce.com</a>
       </p>
     </div>
-    <div className="mx-auto mt-16 flow-root max-w-lg sm:mt-20">
+    <div className="relative pb-10 z-10 mx-auto pt-6 flow-root max-w-lg sm:pt-10">
       <h2 className="sr-only">Popular pages</h2>
-      <ul role="list" className="-mt-6 divide-y divide-gray-900/5 border-b border-gray-900/5">
+      <ul role="list" className="-pt-6 divide-y divide-gray-900/5 border-b border-gray-900/5">
         {links.map((link, linkIdx) => (
-          <li key={linkIdx} className="relative flex gap-x-6 py-6">
+          <li key={linkIdx} className="relative flex gap-x-6 py-6 mr-5">
             <div className="flex h-10 w-10 flex-none items-center justify-center rounded-lg shadow-sm ring-1 ring-gray-900/10">
               <link.icon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
             </div>
@@ -65,7 +66,7 @@ const NotFoundPage = () => (
                   {link.name}
                 </a>
               </h3>
-              <p className="mt-2 text-sm leading-6 text-gray-600">{link.description}</p>
+              <p className="pt-2 text-sm leading-6 text-gray-600">{link.description}</p>
             </div>
             <div className="flex-none self-center">
               <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -73,7 +74,7 @@ const NotFoundPage = () => (
           </li>
         ))}
       </ul>
-      <div className="mt-10 flex justify-center">
+      <div className="pt-10 pb-10 flex justify-center">
         <a href="#" className="text-sm font-semibold leading-6 text-indigo-600">
           <span aria-hidden="true">&larr;</span>
           Back to home

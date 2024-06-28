@@ -13,13 +13,14 @@ const path = require('path');
 
 // 配置别名
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        "@/images": path.resolve(__dirname, "src/images"),
-        "@/components": path.resolve(__dirname, "src/components"),
-        "@/utils": path.resolve(__dirname, "src/utils"),
-      },
-    },
-  });
+	actions.setWebpackConfig({
+		resolve: {
+			alias: {
+				"@/images": path.resolve(__dirname, "src/data/images"),
+				"@/tables": path.resolve(__dirname, "src/data/tables"),
+				"@/components": path.resolve(__dirname, "src/components"),
+				"@/utils": path.resolve(__dirname, "src/utils"),
+			},
+		},
+	});
 };

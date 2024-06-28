@@ -25,6 +25,7 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
+
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -34,6 +35,7 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -44,30 +46,36 @@ body {
   margin: 0;
   word-wrap: break-word;
 }
+
 a {
   background-color: transparent;
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
 }
+
 a:active,
 a:hover {
   outline-width: 0;
   text-decoration: none;
 }
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
 }
+
 b,
 strong {
   font-weight: inherit;
   font-weight: bolder;
 }
+
 dfn {
   font-style: italic;
 }
+
 h1 {
   margin: 0;
   margin-bottom: 3rem;
@@ -75,13 +83,16 @@ h1 {
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
 }
-h1 > b {
+
+h1>b {
   color: var(--color-primary);
 }
+
 img {
   border-style: none;
   max-width: 100%;
 }
+
 code,
 kbd,
 pre,
@@ -90,6 +101,7 @@ samp {
   font-size: 1em;
   line-height: inherit;
 }
+
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -102,15 +114,19 @@ hr {
   border: none;
   height: 1px;
 }
+
 * {
   box-sizing: inherit;
 }
+
 *:before {
   box-sizing: inherit;
 }
+
 *:after {
   box-sizing: inherit;
 }
+
 hgroup,
 img,
 figure,
@@ -124,12 +140,14 @@ p {
   padding: 0;
   margin-bottom: var(--space-4);
 }
+
 ul,
 ol {
   margin-left: var(--space-4);
   list-style-position: outside;
   list-style-image: none;
 }
+
 pre {
   margin-left: 0;
   margin-right: 0;
@@ -143,57 +161,72 @@ pre {
   word-wrap: normal;
   padding: var(--space-4);
 }
+
 b,
 strong,
 dt,
 th {
   font-weight: bold;
 }
+
 li {
   margin-bottom: calc(var(--space-4) / 2);
 }
+
 ol li,
 ul li {
   padding-left: 0;
 }
-li > ol,
-li > ul {
+
+li>ol,
+li>ul {
   margin-bottom: calc(var(--space-4) / 2);
   margin-left: var(--space-4);
   margin-top: calc(var(--space-4) / 2);
 }
+
 blockquote *:last-child {
   margin-bottom: 0;
 }
+
 li *:last-child {
   margin-bottom: 0;
 }
+
 p *:last-child {
   margin-bottom: 0;
 }
-li > p {
+
+li>p {
   margin-bottom: calc(var(--space-4) / 2);
 }
+
 p {
   max-width: 680px;
 }
+
 code {
   font-size: 0.875rem;
 }
+
 kbd {
   font-size: 0.875rem;
 }
+
 samp {
   font-size: 0.875rem;
 }
+
 abbr {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
 }
+
 acronym {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
 }
+
 tt,
 code {
   background-color: var(--color-code-bg);
@@ -204,9 +237,11 @@ code {
   padding-top: 0.25em;
   word-break: normal;
 }
+
 pre code {
   background: none;
 }
+
 code:before,
 code:after,
 tt:before,
@@ -214,6 +249,7 @@ tt:after {
   content: "\00a0";
   letter-spacing: -0.2em;
 }
+
 pre code:before,
 pre code:after,
 pre tt:before,
@@ -223,22 +259,36 @@ pre tt:after {
 
 @keyframes highlight-shine {
   from {
-    background-position: 200%; /* 初始位置 */
+    background-position: 200%;
+    /* 初始位置 */
   }
+
   to {
-    background-position: -200%; /* 结束位置 */
+    background-position: -200%;
+    /* 结束位置 */
   }
 }
 
+/* 定义伪元素的闪烁效果 */
 .shine-animation {
-  background-image: linear-gradient(
-    to right, 
-    rgba(255, 255, 255, 0) 0%, 
-    rgba(255, 255, 255, 0.8) 80%, 
-    rgba(255, 255, 255, 0) 100%
-  );
+  position: relative;
+}
+
+.shine-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right,
+      rgba(158, 158, 158, 0) 0%,
+      rgba(255, 255, 255, 0.395) 80%,
+      rgba(163, 163, 163, 0) 100%);
   background-size: 200% auto;
-  animation: highlight-shine 2s linear infinite;
+  animation: highlight-shine 9s ease-in-out infinite;
+  pointer-events: none;
+  /* 确保伪元素不影响交互 */
 }
 
 .image-container::after {
@@ -249,15 +299,14 @@ pre tt:after {
   right: 0;
   bottom: 0;
   /* background: rgba(255, 255, 255, 0.95); 白色半透明 */
-  background:  linear-gradient(
-    242deg, 
-    rgb(0, 0, 0) 0%, 
-    rgba(150, 150, 150, 0.623) 30%, 
-    rgba(176, 176, 176, 0.897) 60%,
-    rgb(223, 223, 197) 70%,
-    rgba(166, 166, 166, 0.8) 87%,
-    rgb(187, 197, 186) 100%
-    /* rgb(37, 99, 235) 100% */
-  );
+  background: linear-gradient(242deg,
+      rgb(0, 0, 0) 0%,
+      rgba(150, 150, 150, 0.623) 30%,
+      rgba(176, 176, 176, 0.897) 60%,
+      rgb(223, 223, 197) 70%,
+      rgba(166, 166, 166, 0.8) 87%,
+      rgb(187, 197, 186) 100%
+      /* rgb(37, 99, 235) 100% */
+    );
   background-size: 200% auto;
 }

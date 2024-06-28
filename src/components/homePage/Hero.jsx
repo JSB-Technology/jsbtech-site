@@ -72,7 +72,7 @@ export function Hero() {
       </h1>
 
       {/* Hero 小标语 */}
-      <p className="relative z-10 mx-auto mt-5 max-w-2xl text-lg tracking-tight text-slate-700">
+      <p id="powders" className="relative z-10 mx-auto mt-5 max-w-2xl text-lg tracking-tight text-slate-700">
         Meet the pinnacle of innovation in the world of{'  '}
         <span className="font-bold">Concrete Water Reducers{'  '}</span>
         and{'  '}

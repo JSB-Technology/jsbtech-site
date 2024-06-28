@@ -39,7 +39,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/assets/logo.svg`, // This path is relative to the root of the site.
+        icon: `src/data/images/assets/logo.svg`, // This path is relative to the root of the site.
       },
     },
     // TODO： 开发和发布版分别配置 robots.txt
@@ -55,7 +55,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/data/images`,
         
       },
     },
@@ -72,7 +72,7 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         // 语言 JSON 文件的路径
-        path: `${__dirname}/src/intl`,
+        path: `${__dirname}/src/data/intl`,
         // 支持的语言列表
         languages: ['zh', 'ar', 'es', 'ru', `en`],
         // 默认语言

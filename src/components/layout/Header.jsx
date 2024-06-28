@@ -26,25 +26,25 @@ const products = [
   {
     name: 'Reputable Liquid PCE',
     description: 'Our reputable Liquid Polycarboxylate Superplasticizer, the industry-leading 4th-gen Water-Reducing Agent',
-    href: '#',
+    href: '/products/liquid-PCE',
     icon: ChartPieIcon,
   },
   {
     name: 'Fulture of Powder PCE',
     description: 'Just announced revolution, boosting huge improvement over traditional powders, proudly heralds the future of construction.',
-    href: '/products',
+    href: '/#powders',
     icon: CursorArrowRaysIcon,
   },
   {
     name: 'GDPC-5C',
     description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!',
-    href: '#',
+    href: '/products/GDPC-5C',
     icon: SquaresPlusIcon
   },
   {
     name: 'Services',
     description: 'Come learn about our Customer-first Service and Convenient Delivery process',
-    href: '#',
+    href: '/Services',
     icon: Bars3Icon,
   },
 ]
