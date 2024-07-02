@@ -149,7 +149,7 @@ export function Header() {
     }}>
 
       <Container className="p-0">
-        <nav className="relative z-50 h-33 flex justify-between items-start">
+        <nav className="relative z-40 h-33 flex justify-between items-start">
           <div className="flex items-start md:gap-x-12">
 
             {/* 大 Logo */}
@@ -203,22 +203,7 @@ export function Header() {
                         ))}
                       </div>
                       {/* CTA 按钮 */}
-                      {/* <div className="bg-gray-50">
-                        <div className="px-6 lg:px-8 max-w-7xl mx-auto">
-                          <div className="grid grid-cols-3 divide-x divide-gray-900/5 border-x border-gray-900/5">
-                            {callsToAction.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className="flex items-center justify-center no-underline gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                              >
-                                <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                                {item.name}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </div> */}
+                      
                     </Popover.Panel>
                   </Transition>
                 </Popover>

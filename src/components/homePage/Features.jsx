@@ -50,19 +50,22 @@ export function Features() {
       title: 'Fulture of Powder PCE',
       description: 'Just announced revolution, boosting huge improvement over traditional powders, proudly heralds the future of construction.',
       href: '/products/powder',
-      image: picQuery.picPower.publicURL
+      image: picQuery.picPower.publicURL,
+      id: 'notused'
     },
     {
       title: 'GDPC-5C',
       description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!',
       href: '/products/machine',
-      image: picQuery.picMachine.publicURL
+      image: picQuery.picMachine.publicURL,
+      id: 'machine'
     },
     {
       title: 'Reputable Liquid PCE',
       description: 'Our reputable Liquid Polycarboxylate Superplasticizer, the industry-leading 4th-gen Water-Reducing Agent',
       href: '/products/liquid',
-      image: picQuery.picLiquid.publicURL
+      image: picQuery.picLiquid.publicURL,
+      id: 'notused1'
     },
   ]
 
@@ -114,6 +117,7 @@ export function Features() {
                       <h3>
                         <Tab
                           // id={`tab-${feature.title.replace(/\s+/g, '-').toLowerCase()}`}
+                          // id={feature.id}
                           className={clsx(
                             'font-display text-lg ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex

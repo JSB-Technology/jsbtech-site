@@ -5,6 +5,8 @@ import { Button } from '@/components/spare/Button'
 import { Container } from '@/components/spare/Container'
 import { FeaturesIndustry } from "@/components/homePage/Features_Industry";
 
+import { FloatingMenu } from"@/components/homePage/FloatingMenu";
+
 const threeWords = [
   'Join ,',
   'Strive ,',
@@ -24,6 +26,8 @@ export function Hero() {
       {/* <div className="absolute inset-0 -z-0 bg-white bg-opacity-80"></div> */}
 
       {/* TODO: 动态背景图片 + 更正图片加载方式！！！ */}
+
+      <FloatingMenu/>
 
       <div className="absolute inset-0 z-0 image-container">
         <img
