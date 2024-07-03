@@ -148,56 +148,68 @@ export function Header() {
       // backgroundImage: 'linear-gradient(white 75%, rgba(255, 255, 255, 0.2))'
       background: 'white'
     }}>
+
       <Container className="p-0">
         <nav className="relative z-40 h-33 flex justify-between items-start">
-          <div className="flex items-start md:gap-x-12">
+          <div className="container mx-auto flex md:gap-x-12">
 
             {/* 大 Logo */}
-            <Link to="/" aria-label="Home" className='pb-3'>
-              <Logo />
-            </Link>
+            <span>
+              <Link to="/" aria-label="Home" className='pb-3'>
+                <Logo />
+              </Link>
+            </span>
+
 
             {/* 导航栏 */}
-            <div className="hidden mt-9 md:flex md:gap-x-6 lg:gap-x-8">
+            <span className='w-full'>
+              <div className="hidden mt-9 md:flex justify-between">
+                <div className="flex md:gap-x-6 lg:gap-x-8">
+                  <NavLink href="/about-us">Our Story</NavLink>
 
-              <NavLink href="/about-us">Our Story</NavLink>
+                  <NavLink href="/blog">News</NavLink>
 
-              <NavLink href="/blog">News</NavLink>
+                  <NavLink href="/common-questions">Q&A</NavLink>
 
-              <NavLink href="/common-questions">Q&A</NavLink>
+                  <NavLink href="/contact">Contact</NavLink>
+                </div>
 
-              <NavLink href="/contact">Contact</NavLink>
+                
+                {/* 右半侧导航栏 */}
+                <div className="ml-auto -mt-1" >
+                  <div className="flex gap-x-6 md:gap-x-8">
 
-            </div>
+                    {/* 样本获取按钮 */}
+                    <Button color="blue" className='hidden md:block no-underline h-10' to='/register-sample'>
+                      <span>
+                        Get Samples<span className="hidden lg:inline"></span>
+                      </span>
+                    </Button>
+
+                    {/* 语言栏 */}
+                    <LangSelector className="" />
+
+
+                    {/* 移动端 */}
+                    <div className="-mr-1 mt-3 md:hidden">
+                      <MobileNavigation />
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              {/* 下面一半导航 */}
+              <div>
+                <FloatingMenu />
+              </div>
+
+            </span>
           </div>
 
-          {/* 右半侧导航栏 */}
-          <div className="flex item-start mt-10 gap-x-5 md:gap-x-8">
 
-            {/* 偏右边导航 */}
-            {/* <div className="hidden md:block ">
-              <NavLink  href="/login">Our Story</NavLink>
-            </div> */}
-
-            {/* 样本获取按钮 */}
-            <Button color="blue" className='hidden md:block no-underline h-10' to='/register-sample'>
-              <span>
-                Get Samples<span className="hidden lg:inline"></span>
-              </span>
-            </Button>
-
-            {/* 语言栏 */}
-            <LangSelector className="" />
-
-            {/* 移动端 */}
-            <div className="-mr-1 mt-3 md:hidden">
-              <MobileNavigation />
-            </div>
-
-          </div>
         </nav>
-
-        <FloatingMenu />
 
       </Container>
     </header>

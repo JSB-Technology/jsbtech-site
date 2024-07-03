@@ -4,7 +4,8 @@ import { useStaticQuery, graphql, navigate } from "gatsby"
 import { availableLanguages, defaultLanguage } from '@/utils/languages';
 import { useIntl } from "gatsby-plugin-intl";
 
-import { Header } from "@/components/layout/Header"
+// import { Header } from "@/components/layout/Header"
+import { Header } from "@/components/layout/_Header_BK"
 import { Footer } from "@/components/layout/Footer"
 // import { Banner } from '@/components/layout/Banner'
 import { CustomDialog } from '@/components/spare/CustomDialog';

@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from 'react'
 import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby-plugin-intl";
 
 import clsx from 'clsx'
@@ -30,16 +31,48 @@ export function Features() {
   const picQuery = useStaticQuery(graphql`
     query {
       bgImage: file(relativePath: { eq: "background-features.jpg" }) {
-        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED,
+            placeholder: BLURRED,
+            quality: 100,
+          )
+        }
       }
       picPower: file(relativePath: { eq: "features/p.png" }) {
-        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED,
+            placeholder: BLURRED,
+            quality: 100,
+            width: 800,
+            height: 600
+          )
+        }
       }
       picLiquid: file(relativePath: { eq: "features/l2.png" }) {
-        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED,
+            formats: [AUTO, WEBP, AVIF],
+            placeholder: BLURRED,
+            quality: 90,
+            width: 800,
+            height: 600
+          )
+        }
       }
       picMachine: file(relativePath: { eq: "features/m.png" }) {
-        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED,
+            formats: [AUTO, WEBP, AVIF],
+            placeholder: BLURRED,
+            quality: 90,
+            width: 800,
+            height: 600
+          )
+        }
       }
     }
   `);
@@ -50,21 +83,21 @@ export function Features() {
       title: 'Fulture of Powder PCE',
       description: 'Just announced revolution, boosting huge improvement over traditional powders, proudly heralds the future of construction.',
       href: '/products/powder',
-      image: picQuery.picPower.publicURL,
+      image: picQuery.picPower.childImageSharp.gatsbyImageData,
       id: 'notused'
     },
     {
       title: 'GDPC-5C',
       description: 'The industry-disrupting, Intelligent PCE Manufacturing All-in-one Smart Machine, has now become even better!',
       href: '/products/machine',
-      image: picQuery.picMachine.publicURL,
+      image: picQuery.picMachine.childImageSharp.gatsbyImageData,
       id: 'machine'
     },
     {
       title: 'Reputable Liquid PCE',
       description: 'Our reputable Liquid Polycarboxylate Superplasticizer, the industry-leading 4th-gen Water-Reducing Agent',
       href: '/products/liquid',
-      image: picQuery.picLiquid.publicURL,
+      image: picQuery.picLiquid.childImageSharp.gatsbyImageData,
       id: 'notused1'
     },
   ]
@@ -76,12 +109,18 @@ export function Features() {
       className="relative overflow-hidden bg-blue-600 pb-0 pt-20 sm:pt-22"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-white to-transparent z-10"></div>
-      <img
+      <GatsbyImage 
+        image={picQuery.bgImage.childImageSharp.gatsbyImageData} 
+        alt="background texture"
+        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" 
+      />
+      {/* <img
         src={picQuery.bgImage.publicURL}
         alt="background texture"
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         width={2245}
-        height={1636} />
+        height={1636} /> */}
+      
 
       <Container className="relative z-10">
         <div className="relative z-10 max-w-2xl md:mx-auto md:text-center xl:max-w-none">
@@ -154,14 +193,18 @@ export function Features() {
                     </div>
                     <div className="mt-10 w-[45rem] p-6 pr-20 overflow-hidden bg-gradient-to-t from-white/30 via-transparent to-transparent shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Link to={feature.href}>
-                        <img
+                        <GatsbyImage 
                           className="w-full rounded-xl border-14 border-white"
-                          src={feature.image}
+                          image={feature.image} 
+                          alt={'picture of ' + feature.title}
+                        />
+                        {/* <img
+                          className="w-full rounded-xl border-14 border-white"
+                          src={feature.image} 
                           alt={'picture of ' + feature.title}
                           priority
                           sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-
-                        />
+                        /> */}
                       </Link>
                     </div>
                   </Tab.Panel>
