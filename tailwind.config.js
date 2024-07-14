@@ -4,6 +4,11 @@ module.exports = {
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
+  options: {
+    safelist: [
+      'data-gatsby-image-wrapper' // 直接添加
+    ]
+  },
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
