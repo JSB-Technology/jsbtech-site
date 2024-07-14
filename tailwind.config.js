@@ -6,7 +6,7 @@ module.exports = {
   ],
   options: {
     safelist: [
-      'data-gatsby-image-wrapper' // 直接添加
+      'gatsby-image-wrapper' // 直接添加
     ]
   },
   theme: {
