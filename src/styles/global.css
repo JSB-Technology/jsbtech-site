@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.absolute {
+    position: absolute !important;
+}
+
 .no-select {
     -webkit-user-select: none;
     /* Safari */
