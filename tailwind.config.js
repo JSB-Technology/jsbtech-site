@@ -4,11 +4,6 @@ module.exports = {
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
-  options: {
-    safelist: [
-      'gatsby-image-wrapper' // 直接添加
-    ]
-  },
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -35,7 +30,7 @@ module.exports = {
       },
       maxWidth: {
         '2xl': '40rem',
-      },
+      },  
       boxShadow: {
         'bottom-fade': '0 8px 10px -5px rgba(0, 0, 0, 0.3)',
       },
