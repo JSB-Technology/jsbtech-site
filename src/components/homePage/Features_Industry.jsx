@@ -79,12 +79,12 @@ export function FeaturesIndustry() {
           <Link to={feature.href} className="relative bg-gray-200 rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:bg-gray-300 p-6">
             <GatsbyImage
               image={feature.img}
-              className="inset-0 w-full h-full object-cover absolute !"
+              className="inset-0 w-full h-full object-cover absolute-important"
             />
             <div className="absolute inset-0 bg-black opacity-20 backdrop-blur-sm"></div> {/* Blurred overlay */}
-            <div className="relative z-10">
-              <h2 className="text-2xl font-bold mb-4 text-white">{feature.title}</h2>
-              <p className="font-normal text-white">{feature.description}</p>
+            <div className="flex flex-col justify-center items-center relative z-10 h-full">
+              <h2 className="text-2xl font-bold mb-4 text-white text-center">{feature.title}</h2>
+              <p className="font-normal text-white text-center">{feature.description}</p>
             </div>
           </Link>
 
