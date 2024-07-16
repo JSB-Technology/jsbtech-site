@@ -112,7 +112,7 @@ export function Features() {
       <GatsbyImage 
         image={picQuery.bgImage.childImageSharp.gatsbyImageData} 
         alt="background texture"
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" 
+        className="absolute-important left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]" 
       />
       {/* <img
         src={picQuery.bgImage.publicURL}
